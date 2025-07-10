@@ -40,210 +40,218 @@ Implement a quantized CNN digit classifier that runs on an FPGA with real-time p
 
 This project is licensed under the MIT License — see the `LICENSE` file for details.
 
-12-Week Roadmap to Master Machine Learning on FPGA (with Weekly Projects)
+---
 
-✅ Week 1: Foundations of Digital Design & Verilog Review
+## ROAD MAP
 
-Topics:
+### ✅ Week 1: Foundations of Digital Design & Verilog Review
 
-Combinational and sequential logic
+**Topics:**
 
-FSMs, datapaths, ALUs
+* Combinational and sequential logic
+* FSMs, datapaths, ALUs
+* Simulation and synthesis in Vivado
 
-Simulation and synthesis in Vivado
+**Goals:**
 
-Goals:
+* Refresh Verilog syntax and simulation basics
 
-Refresh Verilog syntax and simulation basics
+**Project:**
 
-Project:
+* Design and simulate a 4-bit ALU (Add, Subtract, AND, OR)
 
-Design and simulate a 4-bit ALU (Add, Subtract, AND, OR)
+---
 
-✅ Week 2: Introduction to Python & Numpy for ML
+### ✅ Week 2: Introduction to Python & Numpy for ML
 
-Topics:
+**Topics:**
 
-Python basics for engineering
+* Python basics for engineering
+* Numpy array operations
+* Basic plotting with Matplotlib
 
-Numpy array operations
+**Goals:**
 
-Basic plotting with Matplotlib
+* Learn how ML models operate in code
 
-Goals:
+**Project:**
 
-Learn how ML models operate in code
+* Build a simple Perceptron classifier (2D point classification)
 
-Project:
+---
 
-Build a simple Perceptron classifier (2D point classification)
+### ✅ Week 3: ML Fundamentals (MLP, Activation Functions, Inference)
 
-✅ Week 3: ML Fundamentals (MLP, Activation Functions, Inference)
+**Topics:**
 
-Topics:
+* Forward pass in MLP
+* Activation functions: ReLU, Sigmoid, Softmax
+* Manual weight application
 
-Forward pass in MLP
+**Goals:**
 
-Activation functions: ReLU, Sigmoid, Softmax
+* Implement a 2-layer MLP forward pass manually
 
-Manual weight application
+**Project:**
 
-Goals:
+* Build and test a 2-layer MLP for digit recognition (MNIST, software-only)
 
-Implement a 2-layer MLP forward pass manually
+---
 
-Project:
+### ✅ Week 4: Fixed-Point Arithmetic & Quantization
 
-Build and test a 2-layer MLP for digit recognition (MNIST, software-only)
+**Topics:**
 
-✅ Week 4: Fixed-Point Arithmetic & Quantization
+* Fixed-point formats (Q1.15, Q8.8, etc.)
+* Quantization of weights/inputs
+* Accuracy vs performance trade-offs
 
-Topics:
+**Goals:**
 
-Fixed-point formats (Q1.15, Q8.8, etc.)
+* Convert Python model to fixed-point representation
 
-Quantization of weights/inputs
+**Project:**
 
-Accuracy vs performance trade-offs
+* Simulate fixed-point MLP in C or Python
 
-Goals:
+---
 
-Convert Python model to fixed-point representation
+### ✅ Week 5: FPGA Project - MLP in Verilog (1 Hidden Layer)
 
-Project:
+**Topics:**
 
-Simulate fixed-point MLP in C or Python
+* Multiply-accumulate (MAC) unit
+* Matrix-vector multiplication in hardware
 
-✅ Week 5: FPGA Project - MLP in Verilog (1 Hidden Layer)
+**Goals:**
 
-Topics:
+* Implement a basic MLP with hardcoded weights
 
-Multiply-accumulate (MAC) unit
+**Project:**
 
-Matrix-vector multiplication in hardware
+* Build a fixed-weight digit classifier in Verilog using MAC units
 
-Goals:
+---
 
-Implement a basic MLP with hardcoded weights
+### ✅ Week 6: Introduction to High-Level Synthesis (HLS)
 
-Project:
+**Topics:**
 
-Build a fixed-weight digit classifier in Verilog using MAC units
+* C to RTL concepts
+* Using Vitis HLS
+* Pipelining and loop unrolling
 
-✅ Week 6: Introduction to High-Level Synthesis (HLS)
+**Goals:**
 
-Topics:
+* Write MLP model in C and convert to HLS
 
-C to RTL concepts
+**Project:**
 
-Using Vitis HLS
+* Reimplement the Verilog MLP from Week 5 using Vitis HLS
 
-Pipelining and loop unrolling
+---
 
-Goals:
+### ✅ Week 7: Basic Image Processing in Python
 
-Write MLP model in C and convert to HLS
+**Topics:**
 
-Project:
+* Image pre-processing for CNNs
+* Resizing, thresholding, normalization
 
-Reimplement the Verilog MLP from Week 5 using Vitis HLS
+**Goals:**
 
-✅ Week 7: Basic Image Processing in Python
+* Prepare inputs for FPGA ML inference
 
-Topics:
+**Project:**
 
-Image pre-processing for CNNs
+* Image pre-processing pipeline for FPGA-ready binary input (MNIST image format)
 
-Resizing, thresholding, normalization
+---
 
-Goals:
+### ✅ Week 8: CNN Concepts and Simplified Model Design
 
-Prepare inputs for FPGA ML inference
+**Topics:**
 
-Project:
+* Convolution, Pooling, Flattening
+* Feature extraction vs classification
 
-Image pre-processing pipeline for FPGA-ready binary input (MNIST image format)
+**Goals:**
 
-✅ Week 8: CNN Concepts and Simplified Model Design
+* Train a tiny CNN with 1 conv + 1 FC layer
 
-Topics:
+**Project:**
 
-Convolution, Pooling, Flattening
+* Train & quantize a tiny CNN model for 5-class digit classification (MNIST subset)
 
-Feature extraction vs classification
+---
 
-Goals:
+### ✅ Week 9: CNN Accelerator Architecture in Verilog or HLS
 
-Train a tiny CNN with 1 conv + 1 FC layer
+**Topics:**
 
-Project:
+* Designing convolution layer
+* Dataflow pipelining in HLS
 
-Train & quantize a tiny CNN model for 5-class digit classification (MNIST subset)
+**Goals:**
 
-✅ Week 9: CNN Accelerator Architecture in Verilog or HLS
+* Implement Conv + ReLU accelerator in hardware
 
-Topics:
+**Project:**
 
-Designing convolution layer
+* CNN feature extractor module using HLS (or Verilog)
 
-Dataflow pipelining in HLS
+---
 
-Goals:
+### ✅ Week 10: Memory & Interface (BRAM, UART, AXI)
 
-Implement Conv + ReLU accelerator in hardware
+**Topics:**
 
-Project:
+* Data movement and buffering
+* Loading image input from memory or UART
 
-CNN feature extractor module using HLS (or Verilog)
+**Goals:**
 
-✅ Week 10: Memory & Interface (BRAM, UART, AXI)
+* Interface FPGA module with external input
 
-Topics:
+**Project:**
 
-Data movement and buffering
+* Implement BRAM interface and UART data loading for image input
 
-Loading image input from memory or UART
+---
 
-Goals:
+### ✅ Week 11: Integration and Optimization
 
-Interface FPGA module with external input
+**Topics:**
 
-Project:
+* Combine CNN + FC + Softmax
+* Timing optimization, resource utilization
 
-Implement BRAM interface and UART data loading for image input
+**Goals:**
 
-✅ Week 11: Integration and Optimization
+* Full model integration
 
-Topics:
+**Project:**
 
-Combine CNN + FC + Softmax
+* Complete digit classifier pipeline in hardware with UART input and classification output
 
-Timing optimization, resource utilization
+---
 
-Goals:
+### ✅ Week 12: Testing, Documentation, and GitHub Upload
 
-Full model integration
+**Topics:**
 
-Project:
+* Functional testing and debugging
+* GitHub project structuring
+* Writing documentation and block diagrams
 
-Complete digit classifier pipeline in hardware with UART input and classification output
+**Goals:**
 
-✅ Week 12: Testing, Documentation, and GitHub Upload
+* Finalize and present project
 
-Topics:
+**Project:**
 
-Functional testing and debugging
+* Create GitHub repository with code, diagrams, testbenches, and report
 
-GitHub project structuring
+---
 
-Writing documentation and block diagrams
-
-Goals:
-
-Finalize and present project
-
-Project:
-
-Create GitHub repository with code, diagrams, testbenches, and report
-
-End Goal: You will build an end-to-end ML pipeline (from Python training to FPGA inference), capable of classifying digits or simple patterns with real-time performance on an FPGA.
+**End Goal:** You will build an end-to-end ML pipeline (from Python training to FPGA inference), capable of classifying digits or simple patterns with real-time performance on an FPGA.
